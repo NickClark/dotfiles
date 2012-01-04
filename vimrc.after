@@ -1,0 +1,11 @@
+set background=light
+
+colorscheme molokai
+
+let g:solarized_visibility = 'low'
+call togglebg#map("<F5>")
+
+if has("mouse")
+  set mouse=a
+  set mousehide
+endif
