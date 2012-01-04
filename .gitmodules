@@ -1,0 +1,12 @@
+[submodule "janus/snipmate-snippets"]
+	path = janus/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
+[submodule "janus/zencoding"]
+	path = janus/zencoding
+	url = https://github.com/mattn/zencoding-vim.git
+[submodule "janus/gundo"]
+	path = janus/gundo
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "janus/extradite"]
+	path = janus/extradite
+	url = https://github.com/int3/vim-extradite.git
