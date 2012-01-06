@@ -1,0 +1,2 @@
+" Disable Hammer because it doesn't work and remove the bindings
+call janus#disable_plugin('hammer')
