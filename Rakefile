@@ -13,11 +13,16 @@ task :default do
     ["Rakefile", "README.markdown"].include?(file)
   end
 
+  skip_warned = false
   files.each do |file|
     begin
       FileUtils.ln_s(File.join(FileUtils.pwd, file), File.join(dest, ".#{file}"), :force => force)
     rescue StandardError => e
-      puts "Skipped #{file}. Run rake with FORCE=true to overwrite. #{e.inspect}"
+      unless skip_warned
+        puts "Run rake with FORCE=true to overwrite all linked files."
+        skip_warned = true
+      end
+      puts "Skipped #{file}."
     end
   end
 
