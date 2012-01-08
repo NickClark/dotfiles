@@ -21,4 +21,4 @@ you would run:
 
 3. That should be it. The first thing I usually do now is run
        
-        rvm install 1.9.2 && rvm use 1.9.3 --default
+        rvm install 1.9.3 && rvm use 1.9.3 --default
