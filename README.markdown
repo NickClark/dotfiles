@@ -19,6 +19,8 @@ you would run:
         cd ~/.dotfiles 
         rake
 
-3. That should be it. The first thing I usually do now is run
+4. Change your shell to zsh (optional) `chsh -s /bin/zsh`
+
+5. That should be it. The first thing I usually do now is run
        
         rvm install 1.9.3 && rvm use 1.9.3 --default
