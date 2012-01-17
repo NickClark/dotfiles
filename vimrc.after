@@ -1,6 +1,6 @@
-set background=light
+set background=dark
 
-colorscheme molokai
+colorscheme solarized
 
 let g:solarized_visibility = 'low'
 call togglebg#map("<F5>")
