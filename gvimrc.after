@@ -3,7 +3,7 @@ set guioptions=me
 
 if has("gui_running")
   if has("gui_gtk2")
-    :set guifont=DejaVu\ Sans\ Mono 14
+    :set guifont=DejaVu\ Sans\ Mono\ 11
   elseif has("gui_macvim")
     :set guifont=DejaVu\ Sans\ Mono:h14
   endif
