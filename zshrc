@@ -1,3 +1,6 @@
+# Load RVM function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -30,7 +33,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 unsetopt auto_name_dirs
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 function r() {
@@ -45,7 +47,9 @@ function c() {
 
 compdef '_files -W ~/code -/' c r
 
-alias guard='guard -c'
+alias phone_web='adb forward tcp:9222 localabstract:chrome_devtools_remote'
+
+#alias guard='guard -c'
 
 export EDITOR='gvim -f'
 #export CC=/usr/bin/gcc-4.2
