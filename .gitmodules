@@ -10,3 +10,6 @@
 [submodule "janus/extradite"]
 	path = janus/extradite
 	url = https://github.com/int3/vim-extradite.git
+[submodule "janus/powerline"]
+	path = janus/powerline
+	url = https://github.com/Lokaltog/vim-powerline.git

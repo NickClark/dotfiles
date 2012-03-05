@@ -20,3 +20,7 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+set laststatus=2   " Always show the statusline
+set nocompatible   " Disable vi-compatibility
+set encoding=utf-8 " Necessary to show unicode glyphs
