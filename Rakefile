@@ -28,13 +28,14 @@ task :default do
 
   # Setup oh-my-zsh
   puts "Installing oh-my-zsh"
-  `git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh`
+  `git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh`
+
   #Setting up powerline fonts
   puts "Installing powerline DejaVu Font"
   `git clone git://gist.github.com/1630581.git $HOME/.fonts/ttf-dejavu-powerline`
 
   # Setup janus
   puts "Installing janus"
-  `curl -Lo- http://bit.ly/janus-bootstrap | bash`
-  `cd ~/.vim && rvm system && rake`
+  `git clone https://github.com/carlhuda/janus.git $HOME/.vim`
+  `cd $HOME/.vim && rvm use system && rake`
 end
