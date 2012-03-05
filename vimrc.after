@@ -24,3 +24,5 @@ endif
 set laststatus=2   " Always show the statusline
 set nocompatible   " Disable vi-compatibility
 set encoding=utf-8 " Necessary to show unicode glyphs
+
+set ttymouse=xterm2
