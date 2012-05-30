@@ -4,6 +4,10 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
+#export PATH=~/Code/mingw-w32/bin:$PATH
+#export PATH=~/Code/mingw-w32/mingw/bin/:$PATH
+export PATH=~/Code/mingw-w32/bin:$PATH
+
 #android tools
 export PATH=/usr/local/sbin:/usr/local/lib/node_modules:/usr/local/bin:/usr/local/mysql/bin:/Developer/SDKs/android-sdk-mac_x86/tools:/Developer/SDKs/android-sdk-mac_x86/platform-tools:$PATH
 
