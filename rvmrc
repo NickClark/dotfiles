@@ -1,4 +1,5 @@
 export rvm_pretty_print_flag=1
 export rvm_path="$HOME/.rvm"
 export NODE_PATH=/usr/local/lib/node_modules
-export rvm_make_flags="-j 3"
+rvm_configure_env=(CFLAGS="-march=core2 -mtune=generic -O2 -pipe")
+rvm_configure_flags=--with-readline-dir=/usr/local/Cellar/readline/6.2.4

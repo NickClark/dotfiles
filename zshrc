@@ -9,11 +9,10 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH=~/Code/mingw-w32/bin:$PATH
 
 #android tools
-export PATH=/usr/local/sbin:/usr/local/lib/node_modules:/usr/local/bin:/usr/local/mysql/bin:/Developer/SDKs/android-sdk-mac_x86/tools:/Developer/SDKs/android-sdk-mac_x86/platform-tools:$PATH
-
+export PATH=/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/mysql/bin:/Developer/SDKs/android-sdk-macosx/tools:/Developer/SDKs/android-sdk-macosx/platform-tools:$PATH
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="bira"
+ZSH_THEME="agnoster"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -29,9 +28,12 @@ DISABLE_AUTO_TITLE="true"
 
 COMPLETION_WAITING_DOTS="true"
 
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails osx git textmate ruby lighthouse)
-plugins=(ruby rails3 osx git powder rvm brew bundler gem)
+plugins=(ruby rails3 osx git powder rvm brew bundler gem zsh-syntax-highlighting)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,11 +51,36 @@ function c() {
   cd ~/code/$1;
 }
 
-compdef '_files -W ~/code -/' c r
+function nct() {
+  cd ~/code/$1;
+  tmux new -s $1 'vim .' -d
+  tmux -t $1 new-window -n 'term'
+  tmux select-window -t $1:1
+}
+
+function nrt() {
+  cd ~/code/$1;
+  tmux new-session -d -s $1 'reattach-to-user-namespace vim .'
+  tmux new-window -t $1 -n 'zeus' 'zeus start'
+  tmux new-window -t $1 -n 'console' 'zeus rails c'
+  tmux new-window -t $1 -n 'server' 'zeus rails s'
+  tmux new-window -t $1 -n 'log' 'tail -f log/development.log'
+  tmux select-window -t $1:1
+  tmux attach -t $1
+}
+
+compdef '_files -W ~/code -/' c r nct nrt
 
 alias phone_web='adb forward tcp:9222 localabstract:chrome_devtools_remote'
+alias nt='tmux new -s ${PWD##*/}'
 
 #alias guard='guard -c'
 
-export EDITOR='gvim -f'
+export EDITOR='vim'
 #export CC=/usr/bin/gcc-4.2
+alias z='zeus'
+alias zeus='nocorrect zeus'
+
+#Ruby performance
+export RUBY_GC_MALLOC_LIMIT=60000000
+export RUBY_FREE_MIN=200000

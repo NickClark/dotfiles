@@ -1,4 +1,4 @@
-set background=light
+set background=dark
 
 colorscheme solarized
 
@@ -26,3 +26,13 @@ set nocompatible   " Disable vi-compatibility
 set encoding=utf-8 " Necessary to show unicode glyphs
 
 set ttymouse=xterm2
+
+"let $XIKI_DIR = "/Users/nclark/.rvm/gems/ruby-1.9.3-p125/gems/xiki-0.6.3"
+"source /Users/nclark/.rvm/gems/ruby-1.9.3-p125/gems/xiki-0.6.3/etc/vim/xiki.vim
+
+" set default clipboard to system
+set clipboard=unnamed
+let g:turbux_command_rspec  = 'zeus rspec'
+
+map <leader>R :w<cr>:VimuxPromptCommand<cr>
+map <leader>r :w<cr>:VimuxRunLastCommand<cr>
