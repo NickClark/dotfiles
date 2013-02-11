@@ -37,5 +37,5 @@ task :default do
   # Setup janus
   puts "Installing janus"
   `git clone https://github.com/carlhuda/janus.git $HOME/.vim`
-  `cd $HOME/.vim && rvm use system && rake`
+  `cd $HOME/.vim && rake`
 end
