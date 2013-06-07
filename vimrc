@@ -120,16 +120,6 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 
 set ttymouse=xterm2
 
-" Don't delay when coming out of insert
-if ! has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
-endif
-
 set laststatus=2 " display status line in all windows
 set noshowmode " Hide the default mode text, powerline already does
 
