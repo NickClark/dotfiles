@@ -72,9 +72,11 @@ set directory^=~/.vim/_temp//      " where to put swap files." Setup Powerline
 " UltiSnip Config
 let g:UltiSnipsEditSplit = 'vertical'
 let g:UltiSnipsExpandTrigger       = "<tab>"
-let g:UltiSnipsListSnippets        = "<c-tab>"
-let g:UltiSnipsJumpForwardTrigger  = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsListSnippets        = "<s-tab>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-n>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+let g:UltiSnipsSnippetsDir         = "~/.vim/UltiSnips"
+
 
 " ZenCoding
 let g:user_zen_mode='i'
