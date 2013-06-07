@@ -77,6 +77,8 @@ let g:UltiSnipsJumpForwardTrigger  = "<c-n>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsSnippetsDir         = "~/.vim/UltiSnips"
 
+" Power Line Config
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 " ZenCoding
 let g:user_zen_mode='i'
@@ -87,10 +89,6 @@ runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-
-" Power Line Config
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-let g:Powerline_symbols = 'fancy'
 
 " Setup Solarized
 set background=dark
