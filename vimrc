@@ -151,3 +151,6 @@ map <leader>rlz :let g:turbux_command_rspec = '~/.go/src/github.com/burke/zeus/b
 
 map <leader>R :w<cr>:VimuxPromptCommand<cr>
 map <leader>r :w<cr>:VimuxRunLastCommand<cr>
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
