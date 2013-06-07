@@ -1,7 +1,7 @@
-Nicks Dotfiles - README
+Nick's Dotfiles - README
 =======================
 
-This is just a collection of my personal dot files. Vim plugins are manged
+This is just a collection of my personal dot files. Vim plugins are managed
 using git submodules
 
 Install
