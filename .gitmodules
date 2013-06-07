@@ -64,3 +64,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "vim/bundle/zencoding"]
+	path = vim/bundle/zencoding
+	url = http://github.com/mattn/zencoding-vim.git

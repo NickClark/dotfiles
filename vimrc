@@ -76,6 +76,9 @@ let g:UltiSnipsListSnippets        = "<c-tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+" ZenCoding
+let g:user_zen_mode='i'
+let g:use_zen_complete_tag = 1
 
 "Load Pathogen and plugins
 runtime bundle/pathogen/autoload/pathogen.vim
