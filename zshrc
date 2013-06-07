@@ -1,18 +1,18 @@
-# Load RVM function
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.dotfiles/oh-my-zsh
+export POWERLINE_COMMAND=~/.dotfiles/vim/bundle/powerline/scripts/powerline
+export EDITOR='vim'
 
 #export PATH=~/Code/mingw-w32/bin:$PATH
 #export PATH=~/Code/mingw-w32/mingw/bin/:$PATH
-export PATH=~/Code/mingw-w32/bin:$PATH
+export PATH=/usr/local/share/python:/usr/local/share/npm/bin:/usr/local/bin:~/Code/mingw-w32/bin:$PATH
+export PATH=$PATH:/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin
 
-#android tools
-export PATH=/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/mysql/bin:/Developer/SDKs/android-sdk-macosx/tools:/Developer/SDKs/android-sdk-macosx/platform-tools:$PATH
+#Setup go
+export GOPATH=$HOME/.go
+
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -32,14 +32,14 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails osx git textmate ruby lighthouse)
-plugins=(ruby rails3 osx git powder rvm brew bundler gem zsh-syntax-highlighting)
+plugins=(ruby rails3 osx bundler git brew gem zsh-syntax-highlighting)
 
 
 source $ZSH/oh-my-zsh.sh
+. $HOME/.dotfiles/vim/bundle/powerline/powerline/bindings/zsh/powerline.zsh
 
 # Customize to your needs...
 unsetopt auto_name_dirs
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 function r() {
   cd ~/code/$1;
@@ -74,13 +74,16 @@ compdef '_files -W ~/code -/' c r nct nrt
 alias phone_web='adb forward tcp:9222 localabstract:chrome_devtools_remote'
 alias nt='tmux new -s ${PWD##*/}'
 
-#alias guard='guard -c'
-
-export EDITOR='vim'
-#export CC=/usr/bin/gcc-4.2
 alias z='zeus'
 alias zeus='nocorrect zeus'
 
 #Ruby performance
 export RUBY_GC_MALLOC_LIMIT=60000000
 export RUBY_FREE_MIN=200000
+
+# point rbenv to brew's directory
+export RBENV_ROOT=/usr/local/var/rbenv
+# load rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+#export CFLAGS="-march=corei7 -O2 -pipe"

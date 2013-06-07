@@ -1,33 +1,63 @@
-[submodule "janus/snipmate-snippets"]
-	path = janus/snipmate-snippets
-	url = https://github.com/honza/snipmate-snippets.git
-[submodule "janus/zencoding"]
-	path = janus/zencoding
+[submodule "vim/bundle/surround"]
+	path = vim/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/repeat"]
+	path = vim/bundle/repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/bundle/multiple-cursors"]
+	path = vim/bundle/multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/snippets"]
+	path = vim/bundle/snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/bundle/ultisnips"]
+	path = vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/pathogen"]
+	path = vim/bundle/pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/rails"]
+	path = vim/bundle/rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/zencoding"]
+	path = vim/bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
-[submodule "janus/gundo"]
-	path = janus/gundo
-	url = https://github.com/sjl/gundo.vim.git
-[submodule "janus/extradite"]
-	path = janus/extradite
-	url = https://github.com/int3/vim-extradite.git
-[submodule "janus/powerline"]
-	path = janus/powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule "janus/smartinput"]
-	path = janus/smartinput
-	url = https://github.com/kana/vim-smartinput.git
-[submodule "janus/badwolf"]
-	path = janus/badwolf
-	url = https://github.com/sjl/badwolf.git
-[submodule "janus/vimux"]
-	path = janus/vimux
+[submodule "vim/bundle/vimux"]
+	path = vim/bundle/vimux
 	url = https://github.com/benmills/vimux.git
-[submodule "janus/turbux"]
-	path = janus/turbux
+[submodule "vim/bundle/turbux"]
+	path = vim/bundle/turbux
 	url = https://github.com/jgdavey/vim-turbux.git
-[submodule "janus/tabular"]
-	path = janus/tabular
-	url = https://github.com/godlygeek/tabular.git
-[submodule "janus/preview"]
-	path = janus/preview
-	url = https://github.com/greyblake/vim-preview.git
+[submodule "vim/bundle/powerline"]
+	path = vim/bundle/powerline
+	url = https://github.com/Lokaltog/powerline.git
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/unimpaired"]
+	path = vim/bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "vim/bundle/coffee-script"]
+	path = vim/bundle/coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git

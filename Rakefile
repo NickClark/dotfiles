@@ -4,8 +4,8 @@ task :default do
 
   #init and update submodules
   puts "Getting submodules"
-  `git submodule init`
-  `git submodule update`
+  puts `git submodule init`
+  puts `git submodule update`
 
   # Copy over dotfiles
   puts "Copying dotfiles"
@@ -17,7 +17,7 @@ task :default do
   files.each do |file|
     begin
       FileUtils.ln_s(File.join(FileUtils.pwd, file), File.join(dest, ".#{file}"), :force => force)
-    rescue StandardError => e
+    rescue StandardError
       unless skip_warned
         puts "Run rake with FORCE=true to overwrite all linked files."
         skip_warned = true
@@ -26,16 +26,4 @@ task :default do
     end
   end
 
-  # Setup oh-my-zsh
-  puts "Installing oh-my-zsh"
-  `git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh`
-
-  #Setting up powerline fonts
-  puts "Installing powerline DejaVu Font"
-  `git clone git://gist.github.com/1630581.git $HOME/.fonts/ttf-dejavu-powerline`
-
-  # Setup janus
-  puts "Installing janus"
-  `git clone https://github.com/carlhuda/janus.git $HOME/.vim`
-  `cd $HOME/.vim && rake`
 end

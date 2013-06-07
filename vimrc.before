@@ -1,7 +1,0 @@
-" Disable Hammer because it doesn't work and remove the bindings
-"call janus#disable_plugin('hammer')
-call janus#disable_plugin('vroom')
-
-
-"let g:Powerline_symbols = 'compatible'
-let g:Powerline_symbols = 'fancy'
