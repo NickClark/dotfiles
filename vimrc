@@ -121,6 +121,10 @@ set ttymouse=xterm2
 set laststatus=2 " display status line in all windows
 set noshowmode " Hide the default mode text, powerline already does
 
+" Keep cursor from edge
+set sidescroll=1
+set sidescrolloff=5
+
 """" MAPPINGS
 
 " Fugitive
