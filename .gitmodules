@@ -64,3 +64,6 @@
 [submodule "vim/bundle/zencoding"]
 	path = vim/bundle/zencoding
 	url = http://github.com/mattn/zencoding-vim.git
+[submodule "vim/bundle/livestyle"]
+	path = vim/bundle/livestyle
+	url = https://github.com/mattn/livestyle-vim.git
