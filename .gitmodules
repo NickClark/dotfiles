@@ -61,9 +61,9 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "vim/bundle/zencoding"]
-	path = vim/bundle/zencoding
-	url = http://github.com/mattn/zencoding-vim.git
 [submodule "vim/bundle/livestyle"]
 	path = vim/bundle/livestyle
 	url = https://github.com/mattn/livestyle-vim.git
+[submodule "vim/bundle/emmet"]
+	path = vim/bundle/emmet
+	url = https://github.com/mattn/emmet-vim.git
