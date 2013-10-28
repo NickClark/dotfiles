@@ -10,3 +10,28 @@ endsnippet
 snippet expecttb "Jasmine Expect - toBe" i
 expect($1).toBe($2)
 endsnippet
+
+snippet ssa "Angular Spec - @$scope.$apply()" !b
+@$scope.$apply()
+endsnippet
+
+snippet av "Angular Spec - Shared variable" i
+@$$1
+endsnippet
+
+snippet ao "Angular object - Ex. $scope.$apply()" !b
+$$1.$$2
+endsnippet
+
+snippet sao "Angular object - Ex. $scope.$apply()" !b
+@$$1.$$2
+endsnippet
+
+snippet amod "Angular Module" !b
+angular.module('$1'${2:, [$3]})
+endsnippet
+
+snippet ngc "Angular Controller" !b
+angular.module('$1').controller '$2', ($scope${3:, $4})->
+  
+endsnippet
