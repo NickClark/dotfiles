@@ -85,3 +85,6 @@ export RUBY_FREE_MIN=200000
 export RBENV_ROOT=/usr/local/var/rbenv
 # load rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+#Autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
