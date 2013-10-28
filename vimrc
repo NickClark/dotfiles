@@ -90,9 +90,9 @@ filetype plugin indent on
 
 " Setup Solarized
 set background=dark
+let g:solarized_visibility = 'high'
 colorscheme solarized
-let g:solarized_visibility = 'low'
-call togglebg#map("<F5>")
+call togglebg#map("<F5>") 
 
 
 " Enable Mouse for when I'm feeling lazy
