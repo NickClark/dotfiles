@@ -121,6 +121,8 @@ set ttymouse=xterm2
 set laststatus=2 " display status line in all windows
 set noshowmode " Hide the default mode text, powerline already does
 
+set colorcolumn=80
+
 " Keep cursor from edge
 set sidescroll=1
 set sidescrolloff=5
