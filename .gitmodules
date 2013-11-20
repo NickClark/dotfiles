@@ -58,9 +58,6 @@
 [submodule "vim/bundle/easymotion"]
 	path = vim/bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
-[submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule "vim/bundle/livestyle"]
 	path = vim/bundle/livestyle
 	url = https://github.com/mattn/livestyle-vim.git
@@ -76,3 +73,9 @@
 [submodule "vim/bundle/endwise"]
 	path = vim/bundle/endwise
 	url = https://github.com/tpope/vim-endwise.git
+[submodule "vim/bundle/funcoo"]
+	path = vim/bundle/funcoo
+	url = https://github.com/rizzatti/funcoo.vim.git
+[submodule "vim/bundle/dash"]
+	path = vim/bundle/dash
+	url = https://github.com/rizzatti/dash.vim.git
