@@ -151,3 +151,7 @@ imap <leader>r <esc>:w<cr>:VimuxRunLastCommand<cr>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+
+" VimGutter -- trade accuracy for speed
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
