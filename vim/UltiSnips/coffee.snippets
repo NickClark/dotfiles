@@ -27,11 +27,59 @@ snippet sao "Angular object - Ex. $scope.$apply()" !b
 @$$1.$$2
 endsnippet
 
-snippet amod "Angular Module" !b
+snippet ngm "Angular Module" !b
 angular.module('$1'${2:, [$3]})
 endsnippet
 
 snippet ngc "Angular Controller" !b
-angular.module('$1').controller '$2', ($scope${3:, $4})->
-  
+angular.module('$1').controller '$2',
+($scope${3:, $4})->
+endsnippet
+
+snippet ngs "Angular Service" !b
+angular.module('$1').factory '$2',
+($scope${3:, $4})->
+endsnippet
+
+snippet pit "Pending it" !b
+it "$1"
+endsnippet
+
+snippet it "it" !b
+it "$1", ->
+	$0
+endsnippet
+
+snippet desc "Describe" !b
+describe "$1", ->
+	$0
+endsnippet
+
+snippet ngdesc "Describe" !b
+describe "$1", ->
+	beforeEach module '$2'
+
+	beforeEach inject ($3)->
+endsnippet
+
+snippet fun "Coffeescript function" !i
+->
+endsnippet
+
+snippet funa "Coffeescript function" i
+($1)->
+endsnippet
+
+snippet be "Before Each" !b
+beforeEach ->
+	
+endsnippet
+
+snippet bei "Before Each" !b
+beforeEach inject ($1)->
+	
+endsnippet
+
+snippet ngd "Angular Directive" !b
+angular.module('$1').directive '$2', ->
 endsnippet
