@@ -70,17 +70,39 @@ set directory^=~/.vim/_temp//      " where to put swap files."
 
 
 " UltiSnip Config
+let g:UltiSnipsExpandTrigger       = "<c-j>"
+"let g:UltiSnipsListSnippets        = "<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit = 'vertical'
-let g:UltiSnipsExpandTrigger       = "<tab>"
-let g:UltiSnipsListSnippets        = "<s-tab>"
 let g:UltiSnipsSnippetsDir         = "~/.vim/UltiSnips"
+
+"function! g:UltiSnips_Complete()
+    "call UltiSnips_ExpandSnippet()
+    "if g:ulti_expand_res == 0
+        "if pumvisible()
+            "return "\<C-n>"
+        "else
+            "call UltiSnips_JumpForwards()
+            "if g:ulti_jump_forwards_res == 0
+               "return "\<TAB>"
+            "endif
+        "endif
+    "endif
+    "return ""
+"endfunction
+
+"au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+
+" YouCompleteMe config
+"let g:ycm_semantic_triggers =  {
+  "\   'coffee' : ['.'],
+  "\ }
+
 
 " Power Line Config
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
-" ZenCoding
-let g:user_zen_mode='i'
-let g:use_zen_complete_tag = 1
 
 "Load Pathogen and plugins
 runtime bundle/pathogen/autoload/pathogen.vim
@@ -131,6 +153,7 @@ vmap <C-j> ]egv
 
 " NerdTree
 map <leader>n :NERDTreeToggle<CR>
+map <leader>nf :NERDTreeFind<CR>
 
 " Toggle hl search
 nmap <leader>hs :set hlsearch! hlsearch?<CR>
@@ -155,3 +178,35 @@ cmap w!! w !sudo tee > /dev/null %
 " VimGutter -- trade accuracy for speed
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
+
+" rails.vim projections
+let g:rails_projections = {
+      \ "config/projections.json": {
+      \   "command": "projections"
+      \ },
+      \ "spec/javascripts/unit/*_spec.js.coffee": {
+      \   "command": "jspec",
+      \   "alternate": "app/assets/javascripts/%s.js.coffee",
+      \   "template": "describe \"%S\", ->",
+      \ },
+      \ "app/assets/javascripts/%s.js.coffee": {
+      \   "command": "coffee",
+      \   "alternate": "spec/javascripts/unit/*_spec.js.coffee",
+      \ },
+      \ "spec/features/*_spec.rb": {
+      \   "command": "feature",
+      \   "template": "require 'spec_helper'\n\nfeature '%h' do\n\nend",
+      \ }}
+
+" Detect ngt as html filetype
+autocmd BufRead,BufNewFile *.ngt setlocal filetype=html
+
+" Don't wait so long for key sequences
+"set timeout timeoutlen=150
+
+" Vim can get really slow when it has to syntax highlight long lines
+" Limiting the syntax highlight length speeds things up
+set synmaxcol=120
+
+" Use the silver searcher as replacement for Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'

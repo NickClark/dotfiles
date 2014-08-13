@@ -6,6 +6,8 @@ export EDITOR='vim'
 #export PATH=~/Code/mingw-w32/mingw/bin/:$PATH
 export PATH=/usr/local/share/python:/usr/local/share/npm/bin:/usr/local/bin:~/Code/mingw-w32/bin:$PATH
 export PATH=$PATH:/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin
+export PATH=$PATH:/Applications/Android\ Studio.app/sdk/tools
+export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
 
 #Setup go
 export GOPATH=$HOME/.go
@@ -32,7 +34,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails osx git textmate ruby lighthouse)
-plugins=(ruby rails3 osx bundler git brew gem zsh-syntax-highlighting)
+plugins=(ruby rails osx bundler git brew npm node bower gem zsh-syntax-highlighting)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -53,20 +55,23 @@ function c() {
 
 function nct() {
   cd ~/code/$1;
-  tmux new -s $1 'vim .' -d
-  tmux -t $1 new-window -n 'term'
-  tmux select-window -t $1:1
+  $name=${PWD##*/}
+  tmux new -s $name 'vim .' -d
+  tmux -t $name new-window -n 'term'
+  tmux select-window -t $name:1
 }
 
 function nrt() {
   cd ~/code/$1;
-  tmux new-session -d -s $1 'reattach-to-user-namespace vim .'
-  tmux new-window -t $1 -n 'zeus' 'zeus start'
-  tmux new-window -t $1 -n 'console' 'zeus rails c'
-  tmux new-window -t $1 -n 'server' 'zeus rails s'
-  tmux new-window -t $1 -n 'log' 'tail -f log/development.log'
-  tmux select-window -t $1:1
-  tmux attach -t $1
+  name=${PWD##*/}
+  tmux new -d -s $name -n 'vim' 'vim .'
+  tmux new-window -t $name -n 'zeus' 'zsh -c zeus start'
+  tmux new-window -t $name -n 'console' 'zsh -c zeus rails c'
+  tmux new-window -t $name -n 'server' 'zsh -c zeus rails s'
+  tmux new-window -t $name -n 'log' 'zsh -c tail -f log/development.log'
+  tmux move-window -t $name -r -s 'zeus' -t 'log'
+  tmux select-window -t 'vim'
+  tmux attach -t $name
 }
 
 compdef '_files -W ~/code -/' c r nct nrt
@@ -88,3 +93,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 #Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# Direnv
+eval "$(direnv hook $0)"

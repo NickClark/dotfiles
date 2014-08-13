@@ -15,6 +15,20 @@ snippet ssa "Angular Spec - @$scope.$apply()" !b
 @$scope.$apply()
 endsnippet
 
+snippet def "New method" b
+$1: ${2:($3)}->
+  $0
+endsnippet
+
+snippet defc "New class method" b
+@$1: ${2:($3)}->
+  $0
+endsnippet
+
+snippet apply "Angular Spec - @$scope.$apply()" !b
+$scope.$apply()
+endsnippet
+
 snippet av "Angular Spec - Shared variable" i
 @$$1
 endsnippet
@@ -62,13 +76,13 @@ describe "$1", ->
 	beforeEach inject ($3)->
 endsnippet
 
-snippet fun "Coffeescript function" !i
-->
-endsnippet
+#snippet fun "Coffeescript function" !i
+#->
+#endsnippet
 
-snippet funa "Coffeescript function" i
-($1)->
-endsnippet
+#snippet funa "Coffeescript function" i
+#($1)->
+#endsnippet
 
 snippet be "Before Each" !b
 beforeEach ->
@@ -82,4 +96,10 @@ endsnippet
 
 snippet ngd "Angular Directive" !b
 angular.module('$1').directive '$2', ->
+	link: (scope, element, attrs)->
+		$5
+endsnippet
+
+snippet log "Console.log" !i
+console.log ${1:"${2:HERE}"}
 endsnippet

@@ -79,3 +79,18 @@
 [submodule "vim/bundle/dash"]
 	path = vim/bundle/dash
 	url = https://github.com/rizzatti/dash.vim.git
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/bundle/dispatch"]
+	path = vim/bundle/dispatch
+	url = https://github.com/tpope/vim-dispatch
+[submodule "vim/bundle/jade"]
+	path = vim/bundle/jade
+	url = git://github.com/digitaltoad/vim-jade.git
+[submodule "vim/bundle/projectionist"]
+	path = vim/bundle/projectionist
+	url = https://github.com/tpope/vim-projectionist.git
+[submodule "vim/bundle/snippets"]
+	path = vim/bundle/snippets
+	url = https://github.com/honza/vim-snippets.git
