@@ -1,5 +1,4 @@
 export ZSH=$HOME/.dotfiles/oh-my-zsh
-export POWERLINE_COMMAND=~/.dotfiles/vim/bundle/powerline/scripts/powerline
 export EDITOR='vim'
 
 #export PATH=~/Code/mingw-w32/bin:$PATH
@@ -36,8 +35,14 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
 # Example format: plugins=(rails osx git textmate ruby lighthouse)
 plugins=(ruby rails osx bundler git brew npm node bower gem zsh-syntax-highlighting)
 
-
 source $ZSH/oh-my-zsh.sh
+
+# Powerline path setup
+export PYTHONPATH=$PYTHONPATH:~/.dotfiles/vim/bundle/powerline
+export PATH=$PATH:~/.dotfiles/vim/bundle/powerline/scripts
+
+# Wire in Powerline
+powerline-daemon -q
 . $HOME/.dotfiles/vim/bundle/powerline/powerline/bindings/zsh/powerline.zsh
 
 # Customize to your needs...
