@@ -12,7 +12,12 @@ you would run:
         sudo apt-get install git ruby rake python
 (python is probably already installed)
 
-2. Install [rvm](http://beginrescueend.com/)
+or on Mac OSX:
+        brew install macvim --override-system-vim
+        brew install cmake git
+
+2. Install ruby (I recommend either [rbenv](http://rbenv.org/) or
+[rvm](http://beginrescueend.com/) to manage your rubies)
 
 3. Then run the following commands:
 
@@ -24,7 +29,11 @@ you would run:
    instructions [here](https://github.com/Lokaltog/powerline-fonts) (optional, Powerline will still work, just
 won't look as nice)
 
-5. You may want to copy the config files for Powerline and customize them as you desire.
+5. Build YouCompleteMe
+
+        cd ~/.dotfiles/vim/bundle/YouCompleteMe && ./install.sh
+
+6. You may want to copy the config files for Powerline and customize them as you desire.
 
         mkdir ~/.config/powerline
         cp -R ~/.dotfiles/vim/bundle/powerline/powerline/config_files/* ~/.config/powerline
