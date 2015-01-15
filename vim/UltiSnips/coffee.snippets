@@ -103,3 +103,23 @@ endsnippet
 snippet log "Console.log" !i
 console.log ${1:"${2:HERE}"}
 endsnippet
+
+snippet ngdd "Directive Spec" !b
+describe "Directive: $1", ->
+  beforeEach module '$2'
+
+  beforeEach inject ($rootScope, $compile)->
+    @scope = $rootScope.$new()
+    @el    = angular.element """
+    $3
+    """
+    $compile(@el)(@scope)
+    @scope.$apply()
+
+  it "$4", ->
+   $0
+endsnippet
+
+snippet __ "Add spec variable" b
+$1 = _$1_
+endsnippet
