@@ -15,6 +15,8 @@ you would run:
 
         brew install macvim --override-system-vim
         brew install cmake git
+        brew install the_silver_searcher #better Ack
+        brew install reattach-to-user-namespace #To fix tmux issues with OSX (launchctrl, copy/paste, etc)
 
 2. Install ruby (I recommend either [rbenv](http://rbenv.org/) or
 [rvm](http://beginrescueend.com/) to manage your rubies)
@@ -44,3 +46,9 @@ Troubleshooting
 ---------------
 I had problems with getting MacVim from Homebrew to link to my updated
 version of python. Found an answer [here](http://superuser.com/questions/440981/how-can-i-use-the-homebrew-python-version-with-homebrew-macvim-on-snow-leopard/440982#440982)
+
+If you get zsh auto complete errors, make sure permissions are correct.
+
+        compaudit                     #Discover what files are issues
+        chmod -R go-w ~/.oh-my-zsh    #Fix them
+        rm -f ~/.zcompdump*; compinit #Reload them (or restart the terminal session)
