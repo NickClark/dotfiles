@@ -4,8 +4,7 @@ task :default do
 
   #init and update submodules
   puts "Getting submodules"
-  puts `git submodule init`
-  puts `git submodule update`
+  puts `git submodule update --init --recursive`
 
   # Copy over dotfiles
   puts "Copying dotfiles"
