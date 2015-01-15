@@ -3,8 +3,7 @@ export EDITOR='vim'
 
 #export PATH=~/Code/mingw-w32/bin:$PATH
 #export PATH=~/Code/mingw-w32/mingw/bin/:$PATH
-export PATH=/usr/local/share/python:/usr/local/share/npm/bin:/usr/local/bin:~/Code/mingw-w32/bin:$PATH
-export PATH=$PATH:/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr/bin
+export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=$PATH:/Applications/Android\ Studio.app/sdk/tools
 export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
 
@@ -88,8 +87,8 @@ alias z='zeus'
 alias zeus='nocorrect zeus'
 
 #Ruby performance
-export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000
+#export RUBY_GC_MALLOC_LIMIT=60000000
+#export RUBY_FREE_MIN=200000
 
 # point rbenv to brew's directory
 export RBENV_ROOT=/usr/local/var/rbenv
