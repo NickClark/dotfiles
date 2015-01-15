@@ -10,9 +10,9 @@ Install
 you would run:
 
         sudo apt-get install git ruby rake python
-(python is probably already installed)
 
-or on Mac OSX:
+   or on Mac OSX:
+
         brew install macvim --override-system-vim
         brew install cmake git
 
