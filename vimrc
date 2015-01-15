@@ -210,3 +210,8 @@ set synmaxcol=120
 
 " Use the silver searcher as replacement for Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+let g:user_emmet_settings = {
+\  'indentation' : '  ',
+\}
+let g:emmet_html5 = 1
