@@ -1,3 +1,5 @@
+[[ -a .zshrc_before ]] && source .zshrc_before
+
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 export EDITOR='vim'
 
@@ -90,8 +92,6 @@ alias zeus='nocorrect zeus'
 #export RUBY_GC_MALLOC_LIMIT=60000000
 #export RUBY_FREE_MIN=200000
 
-# point rbenv to brew's directory
-export RBENV_ROOT=/usr/local/var/rbenv
 # load rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -100,3 +100,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Direnv
 eval "$(direnv hook $0)"
+
+[[ -a .zshrc_after ]] && source .zshrc_after
