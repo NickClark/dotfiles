@@ -9,13 +9,13 @@ Install
 1. First be sure you have the necessary dependencies installed. On Debian
 you would run:
 
-        sudo apt-get install git ruby rake python
+        sudo apt-get install git ruby rake python silversearcher-ag
 
    or on Mac OSX:
 
         brew install macvim --override-system-vim
         brew install cmake git
-        brew install the_silver_searcher #better Ack
+        brew install the_silver_searcher #better Ack (provides the 'ag' command)
         brew install reattach-to-user-namespace #To fix tmux issues with OSX (launchctrl, copy/paste, etc)
 
 2. Install ruby (I recommend either [rbenv](http://rbenv.org/) or
@@ -35,12 +35,16 @@ won't look as nice)
 
         cd ~/.dotfiles/vim/bundle/YouCompleteMe && ./install.sh
 
-6. You may want to copy the config files for Powerline and customize them as you desire.
+6. Build ctrlp-cmatcher (much faster ctrlp)
+
+        cd ~/.vim/bundle/ctrlp-cmatcher/ && ./install.sh
+
+7. You may want to copy the config files for Powerline and customize them as you desire.
 
         mkdir ~/.config/powerline
         cp -R ~/.dotfiles/vim/bundle/powerline/powerline/config_files/* ~/.config/powerline
 
-5. Change your shell to zsh (optional) `chsh -s /bin/zsh`
+8. Change your shell to zsh (optional) `chsh -s /bin/zsh`
 
 Troubleshooting
 ---------------
