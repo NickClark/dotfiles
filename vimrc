@@ -215,3 +215,15 @@ let g:user_emmet_settings = {
 \  'indentation' : '  ',
 \}
 let g:emmet_html5 = 1
+
+" Make ctrlp indexing faster
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
+
+" Make ctrlp search faster
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
