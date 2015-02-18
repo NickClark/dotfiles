@@ -116,6 +116,10 @@ let g:solarized_visibility = 'high'
 colorscheme solarized
 call togglebg#map("<F5>") 
 
+"Fix ugly SignColumn particularly when using gitgutter
+highlight clear SignColumn
+autocmd ColorScheme * highlight clear SignColumn
+
 
 " Enable Mouse for when I'm feeling lazy
 if has("mouse")
