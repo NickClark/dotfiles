@@ -6,8 +6,8 @@ export EDITOR='vim'
 #export PATH=~/Code/mingw-w32/bin:$PATH
 #export PATH=~/Code/mingw-w32/mingw/bin/:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=$PATH:/Applications/Android\ Studio.app/sdk/tools
-export PATH=$PATH:/Applications/Android\ Studio.app/sdk/platform-tools
+export PATH=$PATH:~/Library/Android/sdk/tools
+export PATH=$PATH:~/Library/Android/sdk/platform-tools
 
 #Setup go
 export GOPATH=$HOME/.go
@@ -102,3 +102,16 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 eval "$(direnv hook $0)"
 
 [[ -a .zshrc_after ]] && source .zshrc_after
+source /Users/nick/.gulp-autocompletion-zsh/gulp-autocompletion.zsh
+
+function $$gulp_completion() {
+    compls=$(grep -Eho "gulp.task[^,]*" gulpfile.* 2>/dev/null | sed s/'"'/"'"/g | cut -d "'" -f 2 | sort)
+
+    completions=(${=compls})
+    compadd -- $completions
+}
+
+compdef $$gulp_completion gulp
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
