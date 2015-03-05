@@ -102,7 +102,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 eval "$(direnv hook $0)"
 
 [[ -a .zshrc_after ]] && source .zshrc_after
-source /Users/nick/.gulp-autocompletion-zsh/gulp-autocompletion.zsh
 
 function $$gulp_completion() {
     compls=$(grep -Eho "gulp.task[^,]*" gulpfile.* 2>/dev/null | sed s/'"'/"'"/g | cut -d "'" -f 2 | sort)
