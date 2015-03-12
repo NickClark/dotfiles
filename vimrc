@@ -231,3 +231,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 
 " Make ctrlp search faster
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+
+" Make ctrlp work with nested git reops
+let g:ctrlp_working_path_mode = 0
