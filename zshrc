@@ -1,4 +1,4 @@
-[[ -a .zshrc_before ]] && source .zshrc_before
+[[ -a ~/.zshrc_before ]] && source ~/.zshrc_before
 
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 export EDITOR='vim'
@@ -101,8 +101,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Direnv
 eval "$(direnv hook $0)"
 
-[[ -a .zshrc_after ]] && source .zshrc_after
-
 function $$gulp_completion() {
     compls=$(grep -Eho "gulp.task[^,]*" gulpfile.* 2>/dev/null | sed s/'"'/"'"/g | cut -d "'" -f 2 | sort)
 
@@ -114,3 +112,5 @@ compdef $$gulp_completion gulp
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -a ~/.zshrc_after ]] && source ~/.zshrc_after
